@@ -1,0 +1,18 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "clusterName": {
+        "value": "glowingwaffleaks"
+      },
+      "dnsPrefix": {
+        "value": "glowingwaffleaks"
+      },
+      "linuxAdminUsername": {
+        "value": "glowingadmin"
+      },
+      "sshRSAPublicKey": {
+        "value": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCnxL2q5W8mDb2ZXg6ad3UExHcEgCb0Px+TFMbCR7EBkI4X2Fi6l/Dtsr3Vx5grF07TVrYvMoo2FN2kB3TZ+XsCqSyahyza53O980DR4JChP8a4LaofZ8mmK8bwYDOP7mUhmZgIUM+f3dKEiqfCqdlEapu5tOCCl2t1Cx29tw5tvhAkiHuZea4c0kIBFmhLmDrv8K+fodKpD3qL6VY5XIwtMxrTpnx6CCStAPPvQw8Fir9Kol6j5lulpEQyP9FHMRX8tQujTUF4MbkI40LpdOGWJI7Wqk5b9M2hLBlsqj8m90RdCvqbMTEhsLs9obqmmAG2w01FbfC5vSiCEBqZ8J+SSw+gk7H3KMVvYgVse2Y6yjhNLQKRBU8TAB0fZ/mbDxLTMF88vQ+AisQcwb8/rT3NVXlMFRnklJiUmXYsXYYOpjBKSHh7HOXmV25YIcdwgqxvpE0cpYSMu2mwp3q5VMNLd8mXTL793+4chN84/a9+WUmxaz0KvFrLauGrifpbtcjJH8O//Gxj/iuEMsICD82MggsLEd8UcqqlI3tJA++EmvS3yTqRFA5Kp9C9kJki6IjTEL2/1UY9oloQ02cu8ufXLzWipEWdFz3COKjux0PlNnmVGADrhNSfMwmtbVxVMneCK6SCmI3/5Uu7LGsq5oNHsRrTRGHMOYUsq/omWdFibw== muriukilm@cc-ef846ae-7446bdcd56-wspv5"
+      }
+    }
+  }
