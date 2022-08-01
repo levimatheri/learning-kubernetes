@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: samplecore
+  labels:
+    app: samplecore
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: samplecore
+      labels:
+        app: samplecore
+    spec:
+      nodeSelector:
+        "kubernetes.io/os": windows
+      containers:
+      - name: samplecore
+        image: mcr.microsoft.com/dotnet/samples:aspnetapp
+        resources:
+          limits:
+            cpu: 250m
+            memory: 800M
+        ports:
+          - containerPort: 80
+  selector:
+    matchLabels:
+      app: samplecore
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: samplecore
+  annotations:
+    service.beta.kubernetes.io/azure-load-balancer-internal: "true"
+spec:
+  type: LoadBalancer
+  ports:
+  - protocol: TCP
+    port: 80
+  selector:
+    app: samplecore
