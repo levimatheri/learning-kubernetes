@@ -10,7 +10,7 @@
 ## Add Linux node pool ##
 `az aks nodepool add --resource-group glowingwafflerg --cluster-name glowingwaffleaks --name mynodepool --node-count 2`
 
-## Install nginx ingress controller ##
+## Install nginx ingress controller AKS ##
 ```
 helm install nginx-ingress ingress-nginx/ingress-nginx `
     --namespace ingress `
@@ -20,3 +20,10 @@ helm install nginx-ingress ingress-nginx/ingress-nginx `
     --set defaultBackend.nodeSelector."beta\.kubernetes\.io/os"=linux `
     --set controller.admissionWebhooks.patch.nodeSelector."beta\.kubernetes\.io/os"=linux
 ```
+## Launch dashboard Minikube ##
+`minikube dashboard`
+
+## Install nginx ingress controller Minikube ##
+`minikube addons enable ingress`
+ - Also enable tunneling so that ingress is accessible from `localhost`.
+   > `minikube tunnel`
